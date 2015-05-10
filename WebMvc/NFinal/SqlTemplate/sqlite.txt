@@ -1,0 +1,4 @@
+﻿INTEGER	int	Int32	Number
+REAL	decimal	Decimal	Number
+TEXT	string	String	String
+BLOB	Stream	Binary	Stream

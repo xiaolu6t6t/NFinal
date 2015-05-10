@@ -1,0 +1,21 @@
+﻿	var __{$functionName}_{$varName}_con__ = new System.Data.SqlClient.SqlConnection(ConnectionString.{$dbName});
+			__{$functionName}_{$varName}_con__.Open();
+			var __{$functionName}_{$varName}_command__ = new System.Data.SqlClient.SqlCommand("{$sql}", __{$functionName}_{$varName}_con__);
+			<vt:if var="sqlVarParameters.Count" compare=">" value="0">
+			var __{$functionName}_{$varName}_parameters__=new System.Data.SqlClient.SqlParameter[{$sqlVarParameters.Count}];
+			</vt:if>
+			<vt:foreach from="$sqlVarParameters" item="sqlVarParameter" index="i">
+			<vt:if var="sqlVarParameter.field.length" compare=">" value="0">
+			__{$functionName}_{$varName}_parameters__[{$i}-1] = new System.Data.SqlClient.SqlParameter("@{$sqlVarParameter.name}",System.Data.SqlDbType.{$sqlVarParameter.field.dbType},{$sqlVarParameter.field.length});
+			__{$functionName}_{$varName}_parameters__[{$i}-1].Value = {$sqlVarParameter.name};
+			<vt:else>
+			__{$functionName}_{$varName}_parameters__[{$i}-1] = new System.Data.SqlClient.SqlParameter("@{$sqlVarParameter.name}",System.Data.SqlDbType.{$sqlVarParameter.field.dbType});
+			__{$functionName}_{$varName}_parameters__[{$i}-1].Value = {$sqlVarParameter.name};
+			</vt:if>
+			</vt:foreach>
+			<vt:if var="sqlVarParameters.Count" compare=">" value="0">
+			__{$functionName}_{$varName}_command__.Parameters.AddRange(__{$functionName}_{$varName}_parameters__);
+			</vt:if>
+			var {$varName} = __{$functionName}_{$varName}_command__.ExecuteNonQuery();
+			__{$functionName}_{$varName}_con__.Close();
+			

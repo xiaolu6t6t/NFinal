@@ -1,0 +1,1 @@
+﻿            __{$functionName}_{$varName}_con__.Close();

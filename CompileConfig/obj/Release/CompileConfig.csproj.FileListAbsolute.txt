@@ -1,0 +1,12 @@
+D:\webApp\Git\Lucas\CompileConfig\bin\Release\CompileConfig.exe
+D:\webApp\Git\Lucas\CompileConfig\bin\Release\CompileConfig.pdb
+D:\webApp\Git\Lucas\CompileConfig\obj\Release\CompileConfig.frmMain.resources
+D:\webApp\Git\Lucas\CompileConfig\obj\Release\CompileConfig.Properties.Resources.resources
+D:\webApp\Git\Lucas\CompileConfig\obj\Release\CompileConfig.csproj.GenerateResource.Cache
+D:\webApp\Git\Lucas\CompileConfig\obj\Release\CompileConfig.exe
+D:\webApp\Git\Lucas\CompileConfig\obj\Release\CompileConfig.pdb
+D:\webApp\Git\Lucas\CompileConfig\bin\Release\CompileConfig.exe.config
+D:\webApp\Git\Lucas\WebMvc\NFinal\CompileConfig.exe.config
+D:\webApp\Git\Lucas\WebMvc\NFinal\CompileConfig.exe
+D:\webApp\Git\Lucas\WebMvc\NFinal\CompileConfig.pdb
+D:\webApp\Git\Lucas\CompileConfig\obj\Release\CompileConfig.csprojResolveAssemblyReference.cache

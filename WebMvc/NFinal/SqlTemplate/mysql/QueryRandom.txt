@@ -1,0 +1,35 @@
+﻿	var __{$functionName}_{$varName}_con__ = new MySql.Data.MySqlClient.MySqlConnection(ConnectionString.{$dbName});
+            __{$functionName}_{$varName}_con__.Open();
+			var {$varName} = new NFinal.DB.NList<__{$functionName}_{$varName}__>();
+            
+			var __{$functionName}_{$varName}_command__ = new MySql.Data.MySqlClient.MySqlCommand(string.Format("{$sql}",{$topNumber}), __{$functionName}_{$varName}_con__);
+			<vt:if var="sqlVarParameters.Count" compare=">" value="0">
+			var __{$functionName}_{$varName}_parameters__=new MySql.Data.MySqlClient.MySqlParameter[{$sqlVarParameters.Count}];
+			</vt:if>
+			<vt:foreach from="$sqlVarParameters" item="sqlVarParameter" index="i">
+			<vt:if var="sqlVarParameter.field.length" compare=">" value="0">
+			__{$functionName}_{$varName}_parameters__[{$i}-1] = new MySql.Data.MySqlClient.MySqlParameter("?{$sqlVarParameter.name}",MySql.Data.MySqlClient.MySqlDbType.{$sqlVarParameter.field.dbType},{$sqlVarParameter.field.length});
+			__{$functionName}_{$varName}_parameters__[{$i}-1}].Value = {$sqlVarParameter.name};
+			<vt:else>
+			__{$functionName}_{$varName}_parameters__[{$i}-1] = new MySql.Data.MySqlClient.MySqlParameter("?{$sqlVarParameter.name}",MySql.Data.MySqlClient.MySqlDbType.{$sqlVarParameter.field.dbType});
+			__{$functionName}_{$varName}_parameters__[{$i}-1].Value = {$sqlVarParameter.name};
+			</vt:if>
+			</vt:foreach>
+			<vt:if var="sqlVarParameters.Count" compare=">" value="0">
+			__{$functionName}_{$varName}_command__.Parameters.AddRange(__{$functionName}_{$varName}_parameters__);
+			</vt:if>
+			var __{$functionName}_{$varName}_reader__= __{$functionName}_{$varName}_command__.ExecuteReader();
+			if (__{$functionName}_{$varName}_reader__.HasRows)
+			{
+				while (__{$functionName}_{$varName}_reader__.Read())
+				{
+					var __{$functionName}_{$varName}_temp__ = new __{$functionName}_{$varName}__();
+					<vt:foreach from="$fields" item="field" index="i">
+					if(!__{$functionName}_{$varName}_reader__.IsDBNull({$i}-1)){__{$functionName}_{$varName}_temp__.{$field.structFieldName} ={$field.csTypeLink.sqlDbGetType} __{$functionName}_{$varName}_reader__.{$field.csTypeLink.sqlDbGetMethod}({$i}-1);}
+					</vt:foreach>
+					{$varName}.Add(__{$functionName}_{$varName}_temp__);
+				}
+			}
+			__{$functionName}_{$varName}_reader__.Close();
+			__{$functionName}_{$varName}_con__.Close();
+			
