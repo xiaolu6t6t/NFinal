@@ -1,9 +1,0 @@
-D:\WebMvc\Lucas\CompileConfig\bin\Debug\CompileConfig.exe.config
-D:\WebMvc\Lucas\CompileConfig\bin\Debug\CompileConfig.exe
-D:\WebMvc\Lucas\CompileConfig\bin\Debug\CompileConfig.pdb
-D:\WebMvc\Lucas\CompileConfig\obj\Debug\CompileConfig.csprojResolveAssemblyReference.cache
-D:\WebMvc\Lucas\CompileConfig\obj\Debug\CompileConfig.frmMain.resources
-D:\WebMvc\Lucas\CompileConfig\obj\Debug\CompileConfig.Properties.Resources.resources
-D:\WebMvc\Lucas\CompileConfig\obj\Debug\CompileConfig.csproj.GenerateResource.Cache
-D:\WebMvc\Lucas\CompileConfig\obj\Debug\CompileConfig.exe
-D:\WebMvc\Lucas\CompileConfig\obj\Debug\CompileConfig.pdb

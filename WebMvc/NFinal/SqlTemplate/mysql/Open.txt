@@ -1,2 +1,0 @@
-﻿            var __{$functionName}_{$varName}_con__ = new MySql.Data.MySqlClient.MySqlConnection(ConnectionString.{$dbName});
-            __{$functionName}_{$varName}_con__.Open();

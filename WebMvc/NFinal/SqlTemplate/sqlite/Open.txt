@@ -1,2 +1,0 @@
-﻿            var __{$functionName}_{$varName}_con__ = new System.Data.SQLite.SQLiteConnection(ConnectionString.{$dbName});
-            __{$functionName}_{$varName}_con__.Open();

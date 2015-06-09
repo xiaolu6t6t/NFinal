@@ -1,6 +1,0 @@
-D:\WebMvc\Lucas\Release\bin\Debug\Release.exe.config
-D:\WebMvc\Lucas\Release\bin\Debug\Release.exe
-D:\WebMvc\Lucas\Release\bin\Debug\Release.pdb
-D:\WebMvc\Lucas\Release\obj\Debug\Release.csprojResolveAssemblyReference.cache
-D:\WebMvc\Lucas\Release\obj\Debug\Release.exe
-D:\WebMvc\Lucas\Release\obj\Debug\Release.pdb

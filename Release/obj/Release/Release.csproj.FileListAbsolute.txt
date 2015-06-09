@@ -1,9 +1,0 @@
-D:\webApp\Git\Lucas\Release\bin\Release\Release.exe.config
-D:\webApp\Git\Lucas\Release\bin\Release\Release.exe
-D:\webApp\Git\Lucas\Release\bin\Release\Release.pdb
-D:\webApp\Git\Lucas\Release\obj\Release\Release.exe
-D:\webApp\Git\Lucas\Release\obj\Release\Release.pdb
-D:\webApp\Git\Lucas\WebMvc\NFinal\Release.exe.config
-D:\webApp\Git\Lucas\WebMvc\NFinal\Release.exe
-D:\webApp\Git\Lucas\WebMvc\NFinal\Release.pdb
-D:\webApp\Git\Lucas\Release\obj\Release\Release.csprojResolveAssemblyReference.cache
