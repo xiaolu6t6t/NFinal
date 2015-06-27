@@ -1,0 +1,12 @@
+D:\WebMvc\Lucas\WebMvc\NFinal\WebCompiler.exe.config
+D:\WebMvc\Lucas\WebMvc\NFinal\WebCompiler.exe
+D:\WebMvc\Lucas\WebMvc\NFinal\WebCompiler.pdb
+D:\WebMvc\Lucas\WebCompiler\obj\Debug\WebCompiler.exe
+D:\WebMvc\Lucas\WebCompiler\obj\Debug\WebCompiler.pdb
+D:\WebMvc\Lucas\WebCompiler\obj\Debug\WebCompiler.csprojResolveAssemblyReference.cache
+D:\WebMvc\NFinal\WebMvc\NFinal\WebCompiler.exe.config
+D:\WebMvc\NFinal\WebMvc\NFinal\WebCompiler.exe
+D:\WebMvc\NFinal\WebMvc\NFinal\WebCompiler.pdb
+D:\WebMvc\NFinal\WebCompiler\obj\Debug\WebCompiler.csprojResolveAssemblyReference.cache
+D:\WebMvc\NFinal\WebCompiler\obj\Debug\WebCompiler.exe
+D:\WebMvc\NFinal\WebCompiler\obj\Debug\WebCompiler.pdb

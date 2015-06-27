@@ -1,0 +1,15 @@
+D:\WebMvc\Lucas\AutoConfig\bin\Debug\AutoConfig.exe.config
+D:\WebMvc\Lucas\AutoConfig\bin\Debug\AutoConfig.exe
+D:\WebMvc\Lucas\AutoConfig\bin\Debug\AutoConfig.pdb
+D:\WebMvc\Lucas\AutoConfig\obj\Debug\AutoConfig.exe
+D:\WebMvc\Lucas\AutoConfig\obj\Debug\AutoConfig.pdb
+D:\WebMvc\Lucas\WebMvc\NFinal\AutoConfig.exe.config
+D:\WebMvc\Lucas\WebMvc\NFinal\AutoConfig.exe
+D:\WebMvc\Lucas\WebMvc\NFinal\AutoConfig.pdb
+D:\WebMvc\Lucas\AutoConfig\obj\Debug\AutoConfig.csprojResolveAssemblyReference.cache
+D:\WebMvc\NFinal\WebMvc\NFinal\AutoConfig.exe.config
+D:\WebMvc\NFinal\WebMvc\NFinal\AutoConfig.exe
+D:\WebMvc\NFinal\WebMvc\NFinal\AutoConfig.pdb
+D:\WebMvc\NFinal\AutoConfig\obj\Debug\AutoConfig.csprojResolveAssemblyReference.cache
+D:\WebMvc\NFinal\AutoConfig\obj\Debug\AutoConfig.exe
+D:\WebMvc\NFinal\AutoConfig\obj\Debug\AutoConfig.pdb

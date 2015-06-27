@@ -1,0 +1,56 @@
+﻿public class __{$functionName}_{$varName}__:NFinal.DB.Struct
+		{
+			<vt:foreach from="$fields" item="field">
+			public {$field.localType} {$field.structFieldName};
+			</vt:foreach>
+			<vt:foreach from="$structFields" item="structField">
+			public {$structField.typeName} {$structField.varName};
+			</vt:foreach>
+			#region 写Json字符串
+			public override void WriteJson(System.IO.TextWriter tw)
+			{
+				tw.Write("{");
+				<vt:foreach from="$fields" item="field"  index="i">
+					<vt:if var="i" compare="<>" value="1">
+						tw.Write(",");
+					</vt:if>
+					<vt:if var="field.simpleType" value="Number">
+						tw.Write("\"{$field.structFieldName}\":");
+						tw.Write({$field.structFieldName}.ToString());
+					<vt:else>
+						tw.Write("\"{$field.structFieldName}\":");
+						tw.Write("\"");
+						WriteString({$field.structFieldName}==null?"null":{$field.structFieldName}.ToString(),tw);
+						tw.Write("\"");
+					</vt:if>
+				</vt:foreach>
+				<vt:foreach from="$structFields" item="structField"  index="i">
+					<vt:if var="structField.isSimple" value="True">
+						<vt:if var="structField.isNumber" value="True">
+							tw.Write(",");
+							tw.Write("\"{$structField.varName}\":");
+							tw.Write({$structField.varName});
+						<vt:else>
+							tw.Write(",");
+							tw.Write("\"{$structField.varName}\":");
+							tw.Write("\"");
+							WriteString({$structField.varName}==null?"null":{$structField.varName}.ToString(),tw);
+							tw.Write("\"");
+						</vt:if>
+					<vt:else>
+						<vt:if var="structField.isList" value="True">
+							tw.Write(",");
+							tw.Write("\"{$structField.varName}\":");
+							{$structField.varName}.WriteJson({$structField.varName}.GetEnumerator(),tw);
+						<vt:else>
+							tw.Write(",");
+							tw.Write("\"{$structField.varName}\":");
+							{$structField.varName}.WriteJson(tw);
+						</vt:if>
+					</vt:if>
+				</vt:foreach>
+				tw.Write("}");
+			}
+			#endregion
+		}
+		

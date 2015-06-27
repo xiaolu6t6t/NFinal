@@ -1,0 +1,15 @@
+select  sequence_name  from  user_sequences  where  sequence_name= '{$table_name}_sequence'
+
+CREATE SEQUENCE {$table_name}_sequence
+INCREMENT BY 1 -- 每次加几个
+START WITH 1 -- 从1开始计数
+NOMAXVALUE -- 不设置最大值
+NOCYCLE -- 一直累加，不循环
+NOCACHE -- 不建缓冲区
+
+select count(0) into V_NUM from user_triggers where trigger_name = 'tib_bpd_business_process_link'; 
+CREATE TRIGGER {$table_name}_triger BEFORE
+INSERT ON {$table_name} FOR EACH ROW WHEN (new.id is null)--只有在id为空时，启动该触发器生成id号
+begin
+select {$table_name}_sequence.nextval into: new.id from dual;
+end;

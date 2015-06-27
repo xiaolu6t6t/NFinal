@@ -1,0 +1,32 @@
+﻿	#region	var {$varName}; 选取一行
+			var {$varName} = new __{$functionName}_{$varName}__();
+            
+			var __{$functionName}_{$varName}_command__ = new System.Data.SqlClient.SqlCommand("{$sql}", __{$functionName}_{$dbName}_con__);
+			<vt:if var="sqlVarParameters.Count" compare=">" value="0">
+			var __{$functionName}_{$varName}_parameters__=new System.Data.SqlClient.SqlParameter[{$sqlVarParameters.Count}];
+			</vt:if>
+			<vt:foreach from="$sqlVarParameters" item="sqlVarParameter" index="i">
+			<vt:if var="sqlVarParameter.field.length" compare=">" value="0">
+			__{$functionName}_{$varName}_parameters__[{$i}-1] = new System.Data.SqlClient.SqlParameter("@{$sqlVarParameter.name}",System.Data.SqlDbType.{$sqlVarParameter.field.dbType},{$sqlVarParameter.field.length});
+			__{$functionName}_{$varName}_parameters__[{$i}-1].Value = {$sqlVarParameter.name};
+			<vt:else>
+			__{$functionName}_{$varName}_parameters__[{$i}-1] = new System.Data.SqlClient.SqlParameter("@{$sqlVarParameter.name}",System.Data.SqlDbType.{$sqlVarParameter.field.dbType});
+			__{$functionName}_{$varName}_parameters__[{$i}-1].Value = {$sqlVarParameter.name};
+			</vt:if>
+			</vt:foreach>
+			<vt:if var="sqlVarParameters.Count" compare=">" value="0">
+			__{$functionName}_{$varName}_command__.Parameters.AddRange(__{$functionName}_{$varName}_parameters__);
+			</vt:if>
+			var __{$functionName}_{$varName}_reader__= __{$functionName}_{$varName}_command__.ExecuteReader();
+			if (__{$functionName}_{$varName}_reader__.HasRows)
+			{
+				__{$functionName}_{$varName}_reader__.Read();
+
+				{$varName} = new __{$functionName}_{$varName}__();
+				<vt:foreach from="$fields" item="field" index="i">
+				if(!__{$functionName}_{$varName}_reader__.IsDBNull({$i}-1)){{$varName}.{$field.structFieldName} ={$field.csTypeLink.sqlDbGetType} __{$functionName}_{$varName}_reader__.{$field.csTypeLink.sqlDbGetMethod}({$i}-1);}
+				</vt:foreach>
+			}
+			__{$functionName}_{$varName}_reader__.Close();
+	#endregion
+			

@@ -1,0 +1,15 @@
+D:\WebMvc\Lucas\WebMvc\bin\WebMvc.dll
+D:\WebMvc\Lucas\WebMvc\bin\WebMvc.pdb
+D:\WebMvc\Lucas\WebMvc\bin\MySql.Data.dll
+D:\WebMvc\Lucas\WebMvc\bin\Oracle.ManagedDataAccess.dll
+D:\WebMvc\Lucas\WebMvc\bin\System.Data.SQLite.dll
+D:\WebMvc\Lucas\WebMvc\obj\Debug\WebMvc.dll
+D:\WebMvc\Lucas\WebMvc\obj\Debug\WebMvc.pdb
+D:\WebMvc\Lucas\WebMvc\obj\Debug\WebMvc.csprojResolveAssemblyReference.cache
+D:\WebMvc\NFinal\WebMvc\bin\WebMvc.dll
+D:\WebMvc\NFinal\WebMvc\bin\WebMvc.pdb
+D:\WebMvc\NFinal\WebMvc\bin\MySql.Data.dll
+D:\WebMvc\NFinal\WebMvc\bin\Oracle.ManagedDataAccess.dll
+D:\WebMvc\NFinal\WebMvc\bin\System.Data.SQLite.dll
+D:\WebMvc\NFinal\WebMvc\obj\Debug\WebMvc.dll
+D:\WebMvc\NFinal\WebMvc\obj\Debug\WebMvc.pdb

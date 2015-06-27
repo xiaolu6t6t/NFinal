@@ -1,0 +1,12 @@
+D:\webApp\Git\Lucas\WebMvc\bin\WebCompiler.exe.config
+D:\webApp\Git\Lucas\WebMvc\bin\WebCompiler.exe
+D:\webApp\Git\Lucas\WebMvc\bin\WebCompiler.pdb
+D:\webApp\Git\Lucas\WebCompiler\obj\Release\WebCompiler.exe
+D:\webApp\Git\Lucas\WebCompiler\obj\Release\WebCompiler.pdb
+D:\webApp\Git\Lucas\WebCompiler\obj\Release\WebCompiler.csprojResolveAssemblyReference.cache
+D:\webApp\Git\NFinal\WebMvc\bin\WebCompiler.exe.config
+D:\webApp\Git\NFinal\WebCompiler\obj\Release\WebCompiler.exe
+D:\webApp\Git\NFinal\WebCompiler\obj\Release\WebCompiler.pdb
+D:\webApp\Git\NFinal\WebMvc\bin\WebCompiler.exe
+D:\webApp\Git\NFinal\WebMvc\bin\WebCompiler.pdb
+D:\webApp\Git\NFinal\WebCompiler\obj\Release\WebCompiler.csprojResolveAssemblyReference.cache

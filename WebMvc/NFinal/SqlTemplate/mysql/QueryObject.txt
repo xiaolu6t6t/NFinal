@@ -1,0 +1,20 @@
+﻿	#region	var {$varName}; 选取首行首列的值
+			var __{$functionName}_{$varName}_command__ = new MySql.Data.MySqlClient.MySqlCommand("{$sql}", __{$functionName}_{$dbName}_con__);
+			<vt:if var="sqlVarParameters.Count" compare=">" value="0">
+			var __{$functionName}_{$varName}_parameters__=new MySql.Data.MySqlClient.MySqlParameter[{$sqlVarParameters.Count}];
+			</vt:if>
+			<vt:foreach from="$sqlVarParameters" item="sqlVarParameter" index="i">
+			<vt:if var="sqlVarParameter.field.length" compare=">" value="0">
+			__{$functionName}_{$varName}_parameters__[{$i}-1] = new MySql.Data.MySqlClient.MySqlParameter("?{$sqlVarParameter.name}",MySql.Data.MySqlClient.MySqlDbType.{$sqlVarParameter.field.dbType},{$sqlVarParameter.field.length});
+			__{$functionName}_{$varName}_parameters__[{$i}-1].Value = {$sqlVarParameter.name};
+			<vt:else>
+			__{$functionName}_{$varName}_parameters__[{$i}-1] = new MySql.Data.MySqlClient.MySqlParameter("?{$sqlVarParameter.name}",MySql.Data.MySqlClient.MySqlDbType.{$sqlVarParameter.field.dbType});
+			__{$functionName}_{$varName}_parameters__[{$i}-1].Value = {$sqlVarParameter.name};
+			</vt:if>
+			</vt:foreach>
+			<vt:if var="sqlVarParameters.Count" compare=">" value="0">
+			__{$functionName}_{$varName}_command__.Parameters.AddRange(__{$functionName}_{$varName}_parameters__);
+			</vt:if>
+			var {$varName} = new NFinal.DB.SqlObject(__{$functionName}_{$varName}_command__.ExecuteScalar()).{$convertMethodName}();
+	#endregion
+			

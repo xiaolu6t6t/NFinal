@@ -1,0 +1,12 @@
+D:\webApp\Git\Lucas\WebMvc\NFinal\AutoConfig.exe.config
+D:\webApp\Git\Lucas\WebMvc\NFinal\AutoConfig.exe
+D:\webApp\Git\Lucas\WebMvc\NFinal\AutoConfig.pdb
+D:\webApp\Git\Lucas\AutoConfig\obj\Release\AutoConfig.exe
+D:\webApp\Git\Lucas\AutoConfig\obj\Release\AutoConfig.pdb
+D:\webApp\Git\Lucas\AutoConfig\obj\Release\AutoConfig.csprojResolveAssemblyReference.cache
+D:\webApp\Git\NFinal\WebMvc\NFinal\AutoConfig.exe.config
+D:\webApp\Git\NFinal\WebMvc\NFinal\AutoConfig.exe
+D:\webApp\Git\NFinal\WebMvc\NFinal\AutoConfig.pdb
+D:\webApp\Git\NFinal\AutoConfig\obj\Release\AutoConfig.exe
+D:\webApp\Git\NFinal\AutoConfig\obj\Release\AutoConfig.pdb
+D:\webApp\Git\NFinal\AutoConfig\obj\Release\AutoConfig.csprojResolveAssemblyReference.cache

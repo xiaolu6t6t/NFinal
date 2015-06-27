@@ -1,0 +1,12 @@
+D:\WebMvc\Lucas\NFinalBuild\bin\Debug\NFinalBuild.exe.config
+D:\WebMvc\Lucas\NFinalBuild\bin\Debug\NFinalBuild.exe
+D:\WebMvc\Lucas\NFinalBuild\bin\Debug\NFinalBuild.pdb
+D:\WebMvc\Lucas\NFinalBuild\obj\Debug\NFinalBuild.exe
+D:\WebMvc\Lucas\NFinalBuild\obj\Debug\NFinalBuild.pdb
+D:\WebMvc\Lucas\NFinalBuild\obj\Debug\NFinalBuild.csprojResolveAssemblyReference.cache
+D:\WebMvc\NFinal\NFinalBuild\bin\Debug\NFinalBuild.exe.config
+D:\WebMvc\NFinal\NFinalBuild\bin\Debug\NFinalBuild.exe
+D:\WebMvc\NFinal\NFinalBuild\bin\Debug\NFinalBuild.pdb
+D:\WebMvc\NFinal\NFinalBuild\obj\Debug\NFinalBuild.csprojResolveAssemblyReference.cache
+D:\WebMvc\NFinal\NFinalBuild\obj\Debug\NFinalBuild.exe
+D:\WebMvc\NFinal\NFinalBuild\obj\Debug\NFinalBuild.pdb

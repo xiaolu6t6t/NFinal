@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <system.web>
+      <authorization>
+        <deny users="*"/>
+      </authorization>
+    </system.web>
+  <system.webServer>
+    <security>
+      <authorization>
+        <add accessType="Deny" users="?"/>
+      </authorization>
+    </security>
+  </system.webServer>
+</configuration>

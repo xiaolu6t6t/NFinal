@@ -1,0 +1,1258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{066EAD48-994F-4800-B0A3-9F3BB99E3C58}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebMvc</RootNamespace>
+    <AssemblyName>WebMvc</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>
+    </NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=5.1.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>NFinal\Resource\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>NFinal\Resource\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.SQLite, Version=1.0.96.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>NFinal\Resource\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\Common\Controller.cs" />
+    <Compile Include="App\Common\Data\CookieInfo.cs" />
+    <Compile Include="App\Common\Data\CookieManager.cs" />
+    <Compile Include="App\Common\UserControl\Footer.cs" />
+    <Compile Include="App\Common\UserControl\Navigator.cs" />
+    <Compile Include="App\Config.cs" />
+    <Compile Include="App\Controllers\Common\Public.cs" />
+    <Compile Include="App\Controllers\DataBaseController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App\Controllers\HelloWorldController.cs" />
+    <Compile Include="App\Controllers\IndexController.cs" />
+    <Compile Include="App\Controllers\ViewController.cs" />
+    <Compile Include="App\Extension.cs" />
+    <Compile Include="App\Models\BLL\Users.cs" />
+    <Compile Include="App\Models\Common.cs" />
+    <Compile Include="App\Models\ConnectionStrings.cs" />
+    <Compile Include="App\Models\DAL\Users.cs" />
+    <Compile Include="App\Router.cs" />
+    <Compile Include="App\Views\Default\Common\Public\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Views\Default\Common\Public\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Views\Default\Common\Public\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Views\Default\Common\Public\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Views\Default\Common\Public\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Views\Default\Common\Public\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Views\Default\HelloWorldController\WriteHTML.aspx.cs">
+      <DependentUpon>WriteHTML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Views\Default\UserControl\Navigator.ascx.cs">
+      <DependentUpon>Navigator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Views\Default\UserControl\Navigator.ascx.designer.cs">
+      <DependentUpon>Navigator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Views\Default\ViewController\AutoComplete.aspx.cs">
+      <DependentUpon>AutoComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Views\Default\ViewController\AutoComplete.aspx.designer.cs">
+      <DependentUpon>AutoComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\ClearError.aspx.cs">
+      <DependentUpon>ClearError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\ClearError.aspx.designer.cs">
+      <DependentUpon>ClearError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\WebCompiler.aspx.cs">
+      <DependentUpon>WebCompiler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\WebCompiler.aspx.designer.cs">
+      <DependentUpon>WebCompiler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Web\Default\Common\Public\Error.cs" />
+    <Compile Include="App\Web\Default\Common\Public\Header.cs" />
+    <Compile Include="App\Web\Default\Common\Public\Success.cs" />
+    <Compile Include="App\Web\Default\DataBaseController\Delete.cs" />
+    <Compile Include="App\Web\Default\DataBaseController\Insert.cs" />
+    <Compile Include="App\Web\Default\DataBaseController\Page.cs" />
+    <Compile Include="App\Web\Default\DataBaseController\QueryAll.cs" />
+    <Compile Include="App\Web\Default\DataBaseController\QueryObject.cs" />
+    <Compile Include="App\Web\Default\DataBaseController\QueryRandom.cs" />
+    <Compile Include="App\Web\Default\DataBaseController\QueryRow.cs" />
+    <Compile Include="App\Web\Default\DataBaseController\QueryTop.cs" />
+    <Compile Include="App\Web\Default\DataBaseController\Tree.cs" />
+    <Compile Include="App\Web\Default\DataBaseController\Update.cs" />
+    <Compile Include="App\Web\Default\HelloWorldController\Default.cs" />
+    <Compile Include="App\Web\Default\HelloWorldController\Parameter.cs" />
+    <Compile Include="App\Web\Default\HelloWorldController\PostParameter.cs" />
+    <Compile Include="App\Web\Default\HelloWorldController\Write.cs" />
+    <Compile Include="App\Web\Default\HelloWorldController\WriteHTML.cs" />
+    <Compile Include="App\Web\Default\HelloWorldController\WriteJson.cs" />
+    <Compile Include="App\Web\Default\IndexController\Index.cs" />
+    <Compile Include="App\Web\Default\ViewController\AutoComplete.cs" />
+    <Compile Include="App\Web\Default\ViewController\HTMLTag.cs" />
+    <Compile Include="App\Web\Default\ViewController\Index.cs" />
+    <Compile Include="App\Web\Default\WriteCotroll.cs" />
+    <Content Include="App\Views\Default\Common\Public\Footer.ascx" />
+    <Content Include="App\Views\Default\Common\Public\Header.ascx" />
+    <Content Include="App\Views\Default\UserControl\Navigator.ascx" />
+    <Compile Include="NFinal\Application.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\AutoComplete.cs" />
+    <Compile Include="NFinal\BaseAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\Builder.cs" />
+    <Compile Include="NFinal\Common\Payment\Alipay\AlipayConfig.cs" />
+    <Compile Include="NFinal\Common\Payment\Alipay\AlipayCore.cs" />
+    <Compile Include="NFinal\Common\Payment\Alipay\AlipayNotify.cs" />
+    <Compile Include="NFinal\Common\Payment\Alipay\AlipaySubmit.cs" />
+    <Compile Include="NFinal\Common\Payment\Alipay\MD5.cs" />
+    <Compile Include="NFinal\Common\SMS\Open189\BaoMingTemplate.cs" />
+    <Compile Include="NFinal\Common\SMS\Open189\Receive.ashx.cs">
+      <DependentUpon>Receive.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="NFinal\Common\SMS\Open189\SMS.cs" />
+    <Compile Include="NFinal\Common\SMS\Open189\SMSDB.cs" />
+    <Compile Include="NFinal\Common\SMS\Open189\Template.cs" />
+    <Compile Include="NFinal\Common\SMS\Open189\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NFinal\Common\SMS\Open189\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NFinal\Common\SMS\Open189\VerifyCodeTemplate.cs" />
+    <Compile Include="NFinal\Compile\AutoCompleteCompiler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\Compile\CodeSegment.cs" />
+    <Compile Include="NFinal\Compile\Column.cs" />
+    <Compile Include="NFinal\Compile\Compiler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\Compile\CSharpDeclaration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\Compile\CSharpDeclarationParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\Compile\DeleteStatement.cs" />
+    <Compile Include="NFinal\Compile\GenConfig.cs" />
+    <Compile Include="NFinal\Compile\InsertStatement.cs" />
+    <Compile Include="NFinal\Compile\NewField.cs" />
+    <Compile Include="NFinal\Compile\PageSqlAnalyse.cs" />
+    <Compile Include="NFinal\Compile\RandomSqlAnalyse.cs" />
+    <Compile Include="NFinal\Compile\SelectStatement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\Compile\SelectStatementInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\Compile\SQLAnalyse.cs" />
+    <Compile Include="NFinal\Compile\SqlCompiler.cs" />
+    <Compile Include="NFinal\Compile\SqlInfo.cs" />
+    <Compile Include="NFinal\Compile\SqlParser.cs" />
+    <Compile Include="NFinal\Compile\SqlParserEx.cs" />
+    <Compile Include="NFinal\Compile\SqlStatement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\Compile\SqlVarParameter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\Compile\Table.cs" />
+    <Compile Include="NFinal\Compile\TopSqlAnalyse.cs" />
+    <Compile Include="NFinal\Compile\UpdateStatement.cs" />
+    <Compile Include="NFinal\Compile\ViewCompiler.cs" />
+    <Compile Include="NFinal\Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\Controll\AlertAndComfirmLibrary.ascx.cs">
+      <DependentUpon>AlertAndComfirmLibrary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NFinal\Controll\AlertAndComfirmLibrary.ascx.designer.cs">
+      <DependentUpon>AlertAndComfirmLibrary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NFinal\Controll\KindEditorLibrary.ascx.cs">
+      <DependentUpon>KindEditorLibrary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NFinal\Controll\KindEditorLibrary.ascx.designer.cs">
+      <DependentUpon>KindEditorLibrary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NFinal\Controll\Navigator.ascx.cs">
+      <DependentUpon>Navigator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NFinal\Controll\Navigator.ascx.designer.cs">
+      <DependentUpon>Navigator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NFinal\DB\Coding\CsTypeLink.cs" />
+    <Compile Include="NFinal\DB\Coding\CsTypeTable.cs" />
+    <Compile Include="NFinal\DB\Coding\DataUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\DB\Coding\DB.cs" />
+    <Compile Include="NFinal\DB\Coding\Field.cs" />
+    <Compile Include="NFinal\DB\Coding\MySQLDataUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\DB\Coding\OracleDataUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\DB\Coding\SqlDataUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\DB\Coding\SqliteDataUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\DB\Coding\Table.cs" />
+    <Compile Include="NFinal\DB\Coding\TypeLink.cs" />
+    <Compile Include="NFinal\DB\Coding\TypeTable.cs" />
+    <Compile Include="NFinal\DB\Coding\UnCode.cs" />
+    <Compile Include="NFinal\DB\Connection.cs" />
+    <Compile Include="NFinal\DB\ConnectionString.cs" />
+    <Compile Include="NFinal\DB\DBBase.cs" />
+    <Compile Include="NFinal\DB\DBObject.cs" />
+    <Compile Include="NFinal\DB\DBType.cs" />
+    <Compile Include="NFinal\DB\List.cs" />
+    <Compile Include="NFinal\DB\NList.cs" />
+    <Compile Include="NFinal\DB\SqlObject.cs" />
+    <Compile Include="NFinal\DB\Struct.cs" />
+    <Compile Include="NFinal\DB\Transation.cs" />
+    <Compile Include="NFinal\Frame.cs" />
+    <Compile Include="NFinal\Handler\Handler.cs" />
+    <Compile Include="NFinal\Handler\HandlerFactory.cs" />
+    <Compile Include="NFinal\Handler\HttpAsyncHandler.cs" />
+    <Compile Include="NFinal\LitJson\IJsonWrapper.cs" />
+    <Compile Include="NFinal\LitJson\JsonData.cs" />
+    <Compile Include="NFinal\LitJson\JsonException.cs" />
+    <Compile Include="NFinal\LitJson\JsonMapper.cs" />
+    <Compile Include="NFinal\LitJson\JsonMockWrapper.cs" />
+    <Compile Include="NFinal\LitJson\JsonReader.cs" />
+    <Compile Include="NFinal\LitJson\JsonWriter.cs" />
+    <Compile Include="NFinal\LitJson\Lexer.cs" />
+    <Compile Include="NFinal\LitJson\ParserToken.cs" />
+    <Compile Include="NFinal\Main.cs" />
+    <Compile Include="NFinal\Release\Releaser.cs" />
+    <Compile Include="NFinal\Resource\fileTree\connectors\editor.ashx.cs">
+      <DependentUpon>editor.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NFinal\Resource\fileTree\connectors\jqueryFileTree.ashx.cs">
+      <DependentUpon>jqueryFileTree.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="NFinal\Session\Session.cs" />
+    <Compile Include="NFinal\Template\ASPX.cs" />
+    <Compile Include="NFinal\Template\Compress.cs" />
+    <Compile Include="NFinal\Template\HtmlCompressor.cs" />
+    <Compile Include="NFinal\UrlRewriter\BaseModuleRewriter.cs" />
+    <Compile Include="NFinal\UrlRewriter\Config\RewriterConfigSerializerSectionHandler.cs" />
+    <Compile Include="NFinal\UrlRewriter\Config\RewriterConfiguration.cs" />
+    <Compile Include="NFinal\UrlRewriter\Config\RewriterRule.cs" />
+    <Compile Include="NFinal\UrlRewriter\Config\RewriterRuleCollection.cs" />
+    <Compile Include="NFinal\UrlRewriter\ModuleRewriter.cs" />
+    <Compile Include="NFinal\UrlRewriter\RewriterUtils.cs" />
+    <Compile Include="NFinal\VTemplate\Attribute.cs" />
+    <Compile Include="NFinal\VTemplate\AttributeCollection.cs" />
+    <Compile Include="NFinal\VTemplate\ConstantExpression.cs" />
+    <Compile Include="NFinal\VTemplate\DataReaderTag.cs" />
+    <Compile Include="NFinal\VTemplate\Element.cs" />
+    <Compile Include="NFinal\VTemplate\ElementCollection.cs" />
+    <Compile Include="NFinal\VTemplate\ElseTag.cs" />
+    <Compile Include="NFinal\VTemplate\Evaluator\ExpressionEvaluator.cs" />
+    <Compile Include="NFinal\VTemplate\Evaluator\ExpressionException.cs" />
+    <Compile Include="NFinal\VTemplate\Evaluator\ExpressionNode.cs" />
+    <Compile Include="NFinal\VTemplate\Evaluator\ExpressionNodeType.cs" />
+    <Compile Include="NFinal\VTemplate\Evaluator\ExpressionParser.cs" />
+    <Compile Include="NFinal\VTemplate\ExpressionTag.cs" />
+    <Compile Include="NFinal\VTemplate\ForEachElseTag.cs" />
+    <Compile Include="NFinal\VTemplate\ForEachTag.cs" />
+    <Compile Include="NFinal\VTemplate\ForTag.cs" />
+    <Compile Include="NFinal\VTemplate\FunctionTag.cs" />
+    <Compile Include="NFinal\VTemplate\IAttributesElement.cs" />
+    <Compile Include="NFinal\VTemplate\IElementCloneable.cs" />
+    <Compile Include="NFinal\VTemplate\IExpression.cs" />
+    <Compile Include="NFinal\VTemplate\IfConditionTag.cs" />
+    <Compile Include="NFinal\VTemplate\IfTag.cs" />
+    <Compile Include="NFinal\VTemplate\ImportTag.cs" />
+    <Compile Include="NFinal\VTemplate\IncludeTag.cs" />
+    <Compile Include="NFinal\VTemplate\ITemplateRender.cs" />
+    <Compile Include="NFinal\VTemplate\LoopIndex.cs" />
+    <Compile Include="NFinal\VTemplate\OutputTag.cs" />
+    <Compile Include="NFinal\VTemplate\PanelTag.cs" />
+    <Compile Include="NFinal\VTemplate\ParserException.cs" />
+    <Compile Include="NFinal\VTemplate\ParserHelper.cs" />
+    <Compile Include="NFinal\VTemplate\ParserRegex.cs" />
+    <Compile Include="NFinal\VTemplate\Point.cs" />
+    <Compile Include="NFinal\VTemplate\PropertyTag.cs" />
+    <Compile Include="NFinal\VTemplate\ServerDataTag.cs" />
+    <Compile Include="NFinal\VTemplate\SetTag.cs" />
+    <Compile Include="NFinal\VTemplate\Tag.cs" />
+    <Compile Include="NFinal\VTemplate\TagFactory.cs" />
+    <Compile Include="NFinal\VTemplate\Template.cs" />
+    <Compile Include="NFinal\VTemplate\TemplateDocument.cs" />
+    <Compile Include="NFinal\VTemplate\TemplateDocumentConfig.cs" />
+    <Compile Include="NFinal\VTemplate\TextNode.cs" />
+    <Compile Include="NFinal\VTemplate\UserDefinedFunction.cs" />
+    <Compile Include="NFinal\VTemplate\Utility.cs" />
+    <Compile Include="NFinal\VTemplate\Variable.cs" />
+    <Compile Include="NFinal\VTemplate\VariableCollection.cs" />
+    <Compile Include="NFinal\VTemplate\VariableExpression.cs" />
+    <Compile Include="NFinal\VTemplate\VariableIdentity.cs" />
+    <Compile Include="NFinal\VTemplate\VariableTag.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Content Include="App\Views\Default\Common\Public\WebUserControl1.ascx" />
+    <Content Include="App\Views\Default\HelloWorldController\WriteHTML.aspx" />
+    <Content Include="App\Views\Default\ViewController\AutoComplete.aspx" />
+    <Content Include="App\ClearError.aspx" />
+    <Content Include="App\Web\Default\Common\Public\Header.html" />
+    <Content Include="App\Web\Default\DataBaseController\Delete.html" />
+    <Content Include="App\Web\Default\DataBaseController\Insert.html" />
+    <Content Include="App\Web\Default\DataBaseController\Page.html" />
+    <Content Include="App\Web\Default\DataBaseController\QueryAll.html" />
+    <Content Include="App\Web\Default\DataBaseController\QueryObject.html" />
+    <Content Include="App\Web\Default\DataBaseController\QueryRandom.html" />
+    <Content Include="App\Web\Default\DataBaseController\QueryRow.html" />
+    <Content Include="App\Web\Default\DataBaseController\QueryTop.html" />
+    <Content Include="App\Web\Default\DataBaseController\Tree.html" />
+    <Content Include="App\Web\Default\DataBaseController\Update.html" />
+    <Content Include="App\Web\Default\HelloWorldController\Default.html" />
+    <Content Include="App\Web\Default\HelloWorldController\Parameter.html" />
+    <Content Include="App\Web\Default\HelloWorldController\PostParameter.html" />
+    <Content Include="App\Web\Default\HelloWorldController\Write.html" />
+    <Content Include="App\Web\Default\HelloWorldController\WriteHTML.html" />
+    <Content Include="App\Web\Default\HelloWorldController\WriteJson.html" />
+    <Content Include="App\Web\Default\ViewController\AutoComplete.html" />
+    <Content Include="App\Web\Default\ViewController\HTMLTag.html" />
+    <Content Include="App\Web\Default\ViewController\Index.html" />
+    <Content Include="Index.html" />
+    <Content Include="IDE.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App\Content\kindeditor\asp.net\file_manager_json.ashx" />
+    <Content Include="App\Content\kindeditor\asp.net\upload_json.ashx" />
+    <Content Include="App\Content\kindeditor\php\demo.php" />
+    <Content Include="App\Content\kindeditor\php\file_manager_json.php" />
+    <Content Include="App\Content\kindeditor\php\JSON.php" />
+    <Content Include="App\Content\kindeditor\php\upload_json.php" />
+    <Content Include="App\Views\Web.config" />
+    <Content Include="App_Data\Common.db" />
+    <Content Include="App_Data\Session.db" />
+    <None Include="NFinal\Template\App\Common\Data\CookieManager.tpl" />
+    <Content Include="NFinal\Template\App\Models\ConnectionStrings.cs.tpl" />
+    <None Include="NFinal\Template\AutoComplete.tpl" />
+    <None Include="Properties\PublishProfiles\default.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="NFinal\AutoConfig.exe" />
+    <Content Include="NFinal\AutoConfig.exe.config" />
+    <Content Include="NFinal\AutoConfig.pdb" />
+    <Content Include="NFinal\AutoConfig.vshost.exe" />
+    <Content Include="NFinal\AutoConfig.vshost.exe.config" />
+    <Content Include="NFinal\AutoConfig.vshost.exe.manifest" />
+    <Content Include="NFinal\Common.db" />
+    <Content Include="NFinal\Common\SMS\Open189\Receive.ashx" />
+    <Content Include="NFinal\Common\SMS\Open189\Test.aspx" />
+    <Content Include="NFinal\CompileConfig.exe" />
+    <Content Include="NFinal\CompileConfig.exe.config" />
+    <Content Include="NFinal\CompileConfig.pdb" />
+    <Content Include="NFinal\CompileConfig.vshost.exe" />
+    <Content Include="NFinal\CompileConfig.vshost.exe.config" />
+    <Content Include="NFinal\CompileConfig.vshost.exe.manifest" />
+    <Content Include="NFinal\Compile\Build\.NETFramework,Version=v4.0.AssemblyAttributes.txt" />
+    <Content Include="NFinal\Compile\Build\.NETFramework,Version=v4.5.1.AssemblyAttributes.txt" />
+    <Content Include="NFinal\Compile\Build\.NETFramework,Version=v4.5.AssemblyAttributes.txt" />
+    <Content Include="NFinal\Content\css\frame.css" />
+    <Content Include="NFinal\Content\js\jquery-1.11.2.min.js" />
+    <Content Include="NFinal\Content\kindeditor\asp.net\file_manager_json.ashx" />
+    <Content Include="NFinal\Content\kindeditor\asp.net\README.txt" />
+    <Content Include="NFinal\Content\kindeditor\asp.net\upload_json.ashx" />
+    <Content Include="NFinal\Content\kindeditor\examples\auto-height.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\colorpicker.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\custom-plugin.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\custom-theme.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\default.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\dialog.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\dynamic-load.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\file-dialog.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\file-manager.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\filter-mode.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\image-dialog.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\index.css" />
+    <Content Include="NFinal\Content\kindeditor\examples\index.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\jquery-ui-1.9.2.custom.css" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\css\smoothness\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\js\jquery-ui-1.9.2.custom.js" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery-ui\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\jquery.js" />
+    <Content Include="NFinal\Content\kindeditor\examples\multi-image-dialog.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\multi-language.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\newline.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\node.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\paste-type.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\qqstyle.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\readonly.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\simple.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\uploadbutton.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\url-type.html" />
+    <Content Include="NFinal\Content\kindeditor\examples\word-count.html" />
+    <Content Include="NFinal\Content\kindeditor\kindeditor-all-min.js" />
+    <Content Include="NFinal\Content\kindeditor\kindeditor-all.js" />
+    <Content Include="NFinal\Content\kindeditor\kindeditor-min.js" />
+    <Content Include="NFinal\Content\kindeditor\kindeditor.js" />
+    <Content Include="NFinal\Content\kindeditor\lang\ar.js" />
+    <Content Include="NFinal\Content\kindeditor\lang\en.js" />
+    <Content Include="NFinal\Content\kindeditor\lang\ko.js" />
+    <Content Include="NFinal\Content\kindeditor\lang\zh_CN.js" />
+    <Content Include="NFinal\Content\kindeditor\lang\zh_TW.js" />
+    <Content Include="NFinal\Content\kindeditor\license.txt" />
+    <Content Include="NFinal\Content\kindeditor\php\demo.php" />
+    <Content Include="NFinal\Content\kindeditor\php\file_manager_json.php" />
+    <Content Include="NFinal\Content\kindeditor\php\JSON.php" />
+    <Content Include="NFinal\Content\kindeditor\php\upload_json.php" />
+    <Content Include="NFinal\Content\kindeditor\plugins\anchor\anchor.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\autoheight\autoheight.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\baidumap\baidumap.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\baidumap\index.html" />
+    <Content Include="NFinal\Content\kindeditor\plugins\baidumap\map.html" />
+    <Content Include="NFinal\Content\kindeditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\code\code.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\code\prettify.css" />
+    <Content Include="NFinal\Content\kindeditor\plugins\code\prettify.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\emoticons.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\0.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\1.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\10.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\100.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\101.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\102.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\103.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\104.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\105.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\106.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\107.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\108.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\109.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\11.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\110.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\111.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\112.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\113.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\114.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\115.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\116.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\117.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\118.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\119.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\12.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\120.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\121.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\122.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\123.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\124.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\125.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\126.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\127.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\128.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\129.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\13.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\130.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\131.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\132.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\133.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\134.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\14.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\15.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\16.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\17.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\18.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\19.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\2.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\20.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\21.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\22.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\23.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\24.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\25.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\26.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\27.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\28.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\29.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\3.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\30.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\31.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\32.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\33.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\34.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\35.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\36.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\37.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\38.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\39.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\4.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\40.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\41.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\42.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\43.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\44.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\45.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\46.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\47.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\48.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\49.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\5.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\50.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\51.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\52.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\53.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\54.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\55.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\56.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\57.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\58.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\59.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\6.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\60.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\61.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\62.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\63.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\64.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\65.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\66.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\67.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\68.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\69.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\7.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\70.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\71.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\72.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\73.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\74.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\75.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\76.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\77.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\78.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\79.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\8.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\80.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\81.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\82.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\83.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\84.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\85.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\86.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\87.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\88.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\89.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\9.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\90.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\91.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\92.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\93.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\94.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\95.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\96.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\97.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\98.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\99.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\emoticons\images\static.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\filemanager\filemanager.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\flash\flash.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\image\image.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\image\images\align_left.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\image\images\align_right.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\image\images\align_top.gif" />
+    <Content Include="NFinal\Content\kindeditor\plugins\image\images\refresh.png" />
+    <Content Include="NFinal\Content\kindeditor\plugins\insertfile\insertfile.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\lineheight\lineheight.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\link\link.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\map\map.html" />
+    <Content Include="NFinal\Content\kindeditor\plugins\map\map.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\media\media.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\multiimage\images\image.png" />
+    <Content Include="NFinal\Content\kindeditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="NFinal\Content\kindeditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="NFinal\Content\kindeditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="NFinal\Content\kindeditor\plugins\multiimage\multiimage.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\preview\preview.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\quickformat\quickformat.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\table\table.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\template\html\1.html" />
+    <Content Include="NFinal\Content\kindeditor\plugins\template\html\2.html" />
+    <Content Include="NFinal\Content\kindeditor\plugins\template\html\3.html" />
+    <Content Include="NFinal\Content\kindeditor\plugins\template\template.js" />
+    <Content Include="NFinal\Content\kindeditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="NFinal\Content\kindeditor\themes\common\anchor.gif" />
+    <Content Include="NFinal\Content\kindeditor\themes\common\blank.gif" />
+    <Content Include="NFinal\Content\kindeditor\themes\common\flash.gif" />
+    <Content Include="NFinal\Content\kindeditor\themes\common\loading.gif" />
+    <Content Include="NFinal\Content\kindeditor\themes\common\media.gif" />
+    <Content Include="NFinal\Content\kindeditor\themes\common\rm.gif" />
+    <Content Include="NFinal\Content\kindeditor\themes\default\background.png" />
+    <Content Include="NFinal\Content\kindeditor\themes\default\default.css" />
+    <Content Include="NFinal\Content\kindeditor\themes\default\default.png" />
+    <Content Include="NFinal\Content\kindeditor\themes\qq\editor.gif" />
+    <Content Include="NFinal\Content\kindeditor\themes\qq\qq.css" />
+    <Content Include="NFinal\Content\kindeditor\themes\simple\simple.css" />
+    <Content Include="NFinal\Controll\AlertAndComfirmLibrary.ascx" />
+    <Content Include="NFinal\Controll\KindEditorLibrary.ascx" />
+    <Content Include="NFinal\Controll\KindEditorLibrary.txt" />
+    <Content Include="NFinal\Controll\Navigator.ascx" />
+    <Content Include="NFinal\Controll\Navigator.txt" />
+    <Content Include="NFinal\DB\DB.tpl" />
+    <Content Include="NFinal\DB\NStruct.txt" />
+    <Content Include="NFinal\Doc\CodeCreate.dgml" />
+    <Content Include="NFinal\Doc\CodeCreate.jpg" />
+    <Content Include="NFinal\Doc\CodeCreateFlow.jpg" />
+    <Content Include="NFinal\Doc\CodeCreateFlow.sequencediagram" />
+    <Content Include="NFinal\Doc\CodeCreateFlow.sequencediagram.layout">
+      <DependentUpon>CodeCreateFlow.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="NFinal\Doc\Execute.dgml" />
+    <Content Include="NFinal\Doc\Execute.jpg" />
+    <Content Include="NFinal\Doc\ExecuteFlow.jpg" />
+    <Content Include="NFinal\Doc\ExecuteFlow.sequencediagram" />
+    <Content Include="NFinal\Doc\ExecuteFlow.sequencediagram.layout">
+      <DependentUpon>ExecuteFlow.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="NFinal\Doc\LucasClass.dgml" />
+    <Content Include="NFinal\Doc\LucasClass.jpg" />
+    <Content Include="NFinal\Doc\LucasSummary.dgml" />
+    <Content Include="NFinal\Doc\LucasSummary.gif" />
+    <Content Include="NFinal\Microsoft.Build.Utilities.v4.0.dll" />
+    <Content Include="NFinal\NFinalBuild.exe" />
+    <Content Include="NFinal\NFinalBuild.exe.config" />
+    <Content Include="NFinal\NFinalBuild.pdb" />
+    <Content Include="NFinal\NFinalBuild.vshost.exe" />
+    <Content Include="NFinal\NFinalBuild.vshost.exe.config" />
+    <Content Include="NFinal\NFinalBuild.vshost.exe.manifest" />
+    <Content Include="NFinal\Resource\App_Data\Common.db" />
+    <Content Include="NFinal\Resource\App_Data\Session.db" />
+    <Content Include="NFinal\Resource\fileTree\connectors\editor.ashx" />
+    <Content Include="NFinal\Resource\fileTree\connectors\jqueryFileTree.ashx" />
+    <Content Include="NFinal\Resource\fileTree\connectors\jqueryFileTree.asp" />
+    <Content Include="NFinal\Resource\fileTree\connectors\jqueryFileTree.cf" />
+    <Content Include="NFinal\Resource\fileTree\connectors\jqueryFileTree.js" />
+    <Content Include="NFinal\Resource\fileTree\connectors\jqueryFileTree.jsp" />
+    <Content Include="NFinal\Resource\fileTree\connectors\jqueryFileTree.php" />
+    <Content Include="NFinal\Resource\fileTree\connectors\jqueryFileTree.pl" />
+    <Content Include="NFinal\Resource\fileTree\connectors\jqueryFileTree.py" />
+    <Content Include="NFinal\Resource\fileTree\connectors\jqueryFileTree.rb" />
+    <Content Include="NFinal\Resource\fileTree\connectors\jqueryFileTree_huck.lasso" />
+    <Content Include="NFinal\Resource\fileTree\connectors\jqueryFileTree_sabourdin.lasso" />
+    <Content Include="NFinal\Resource\fileTree\images\application.png" />
+    <Content Include="NFinal\Resource\fileTree\images\asp.png" />
+    <Content Include="NFinal\Resource\fileTree\images\aspx.png" />
+    <Content Include="NFinal\Resource\fileTree\images\code.png" />
+    <Content Include="NFinal\Resource\fileTree\images\csharpclass.png" />
+    <Content Include="NFinal\Resource\fileTree\images\csproj.png" />
+    <Content Include="NFinal\Resource\fileTree\images\css.png" />
+    <Content Include="NFinal\Resource\fileTree\images\db.png" />
+    <Content Include="NFinal\Resource\fileTree\images\directory.png" />
+    <Content Include="NFinal\Resource\fileTree\images\doc.png" />
+    <Content Include="NFinal\Resource\fileTree\images\file.png" />
+    <Content Include="NFinal\Resource\fileTree\images\film.png" />
+    <Content Include="NFinal\Resource\fileTree\images\flash.png" />
+    <Content Include="NFinal\Resource\fileTree\images\folder_open.png" />
+    <Content Include="NFinal\Resource\fileTree\images\html.png" />
+    <Content Include="NFinal\Resource\fileTree\images\java.png" />
+    <Content Include="NFinal\Resource\fileTree\images\linux.png" />
+    <Content Include="NFinal\Resource\fileTree\images\music.png" />
+    <Content Include="NFinal\Resource\fileTree\images\pdf.png" />
+    <Content Include="NFinal\Resource\fileTree\images\php.png" />
+    <Content Include="NFinal\Resource\fileTree\images\picture.png" />
+    <Content Include="NFinal\Resource\fileTree\images\ppt.png" />
+    <Content Include="NFinal\Resource\fileTree\images\psd.png" />
+    <Content Include="NFinal\Resource\fileTree\images\ruby.png" />
+    <Content Include="NFinal\Resource\fileTree\images\script.png" />
+    <Content Include="NFinal\Resource\fileTree\images\spinner.gif" />
+    <Content Include="NFinal\Resource\fileTree\images\txt.png" />
+    <Content Include="NFinal\Resource\fileTree\images\xls.png" />
+    <Content Include="NFinal\Resource\fileTree\images\xml.png" />
+    <Content Include="NFinal\Resource\fileTree\images\zip.png" />
+    <Content Include="NFinal\Resource\fileTree\index.html" />
+    <Content Include="NFinal\Resource\fileTree\jquery.easing.js" />
+    <Content Include="NFinal\Resource\fileTree\jquery.js" />
+    <Content Include="NFinal\Resource\fileTree\jqueryFileTree.css" />
+    <Content Include="NFinal\Resource\fileTree\jqueryFileTree.js" />
+    <Content Include="NFinal\Resource\MySql.Data.dll" />
+    <Content Include="NFinal\Resource\Oracle.ManagedDataAccess.dll" />
+    <Content Include="NFinal\Resource\System.Data.SQLite.dll" />
+    <Content Include="NFinal\Resource\x64\SQLite.Designer.dll" />
+    <Content Include="NFinal\Resource\x64\SQLite.Interop.dll" />
+    <Content Include="NFinal\Resource\x86\SQLite.Designer.dll" />
+    <Content Include="NFinal\Resource\x86\SQLite.Interop.dll" />
+    <Content Include="NFinal\Session\main.sql" />
+    <Content Include="NFinal\SqlTemplate\mysql.cs.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\Close.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\Delete.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\ExecuteNonQuery.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\Insert.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\Open.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\Page.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\QueryAll.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\QueryObject.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\QueryRandom.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\QueryRow.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\QueryTop.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\struct.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\Struct.txt" />
+    <Content Include="NFinal\SqlTemplate\mysql\Update.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle.cs.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\Close.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\Delete.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\ExecuteNonQuery.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\IdIncrement.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\Insert.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\Open.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\Page.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\QueryAll.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\QueryObject.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\QueryRandom.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\QueryRow.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\QueryTop.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\Struct.txt" />
+    <Content Include="NFinal\SqlTemplate\oracle\Update.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite.cs.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\Close.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\Delete.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\ExecuteNonQuery.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\Insert.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\Open.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\Page.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\QueryAll.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\QueryObject.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\QueryRandom.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\QueryRow.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\QueryTop.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\Struct.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlite\Update.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver.cs.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\Close.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\Delete.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\ExecuteNonQuery.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\Insert.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\Open.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\Page.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\QueryAll.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\QueryObject.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\QueryRandom.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\QueryRow.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\QueryTop.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\struct.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\Struct.txt" />
+    <Content Include="NFinal\SqlTemplate\sqlserver\Update.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\Close.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\Delete.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\ExecuteNonQuery.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\Insert.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\Open.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\Page.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\QueryAll.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\QueryObject.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\QueryRandom.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\QueryRow.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\Struct.txt" />
+    <Content Include="NFinal\SqlTemplate\Unknow\Update.txt" />
+    <Content Include="NFinal\Template\App\Common\Controller.tpl" />
+    <Content Include="NFinal\Template\App\Common\Data\CookieInfo.tpl" />
+    <Content Include="NFinal\Template\App\Common\Data\CookieManager.tpl" />
+    <Content Include="NFinal\Template\App\Common\Data\CookieManager_Init.tpl" />
+    <Content Include="NFinal\Template\App\Config.tpl" />
+    <Content Include="NFinal\Template\App\Controllers\Common\Public.cs.tpl" />
+    <Content Include="NFinal\Template\App\Controllers\IndexController.cs.tpl" />
+    <Content Include="NFinal\Template\App\Extension.tpl" />
+    <Content Include="NFinal\Template\App\Models\Common.cs.tpl" />
+    <Content Include="NFinal\Template\App\Models\ConnectionStrings_Init.cs.tpl" />
+    <Content Include="NFinal\Template\App\Router.tpl" />
+    <Content Include="NFinal\Template\App\Router_Init.tpl" />
+    <Content Include="NFinal\Template\App\Views\Default\Common\Public\Error.aspx.tpl" />
+    <Content Include="NFinal\Template\App\Views\Default\Common\Public\Footer.ascx.tpl" />
+    <Content Include="NFinal\Template\App\Views\Default\Common\Public\Header.ascx.tpl" />
+    <Content Include="NFinal\Template\App\Views\Default\Common\Public\Success.aspx.tpl" />
+    <Content Include="NFinal\Template\App\Views\Default\IndexController\Index.aspx.tpl" />
+    <Content Include="NFinal\Template\App\Views\Web.config.tpl" />
+    <Content Include="NFinal\Template\App\WebCompiler.aspx.cs.tpl" />
+    <Content Include="NFinal\Template\App\WebCompiler.aspx.designer.cs.tpl" />
+    <Content Include="NFinal\Template\App\WebCompiler.aspx.tpl" />
+    <Content Include="NFinal\Template\App\Web\Default\Common\Public\Error.cs.tpl" />
+    <Content Include="NFinal\Template\App\Web\Default\Common\Public\Error.html" />
+    <Content Include="NFinal\Template\App\Web\Default\Common\Public\Success.cs.tpl" />
+    <Content Include="NFinal\Template\App\Web\Default\Common\Public\Success.html" />
+    <Content Include="NFinal\Template\App\Web\Default\IndexController\Index.cs.tpl" />
+    <Content Include="NFinal\Template\App\Web\Default\IndexController\Index.html" />
+    <Content Include="NFinal\Template\AutoComplete.tpl" />
+    <Content Include="NFinal\Template\Debug.tpl" />
+    <Content Include="NFinal\Template\IDE.html" />
+    <Content Include="NFinal\Template\Index.aspx.tpl" />
+    <Content Include="NFinal\Template\Index.html" />
+    <Content Include="NFinal\Template\IndexController.cs.tpl" />
+    <Content Include="NFinal\Template\Main.tpl" />
+    <Content Include="NFinal\Template\Main_Init.tpl" />
+    <Content Include="NFinal\Template\Web.config.Debug.tpl" />
+    <Content Include="NFinal\Template\Web.config.Release.tpl" />
+    <Content Include="NFinal\Template\Web.config.tpl" />
+    <Content Include="NFinal\VTemplate\ClassDiagram1.cd" />
+    <Content Include="NFinal\VTemplate\docs\readme.txt" />
+    <Content Include="NFinal\WebCompiler.exe" />
+    <Content Include="NFinal\WebCompiler.exe.config" />
+    <Content Include="NFinal\WebCompiler.pdb" />
+    <Content Include="NFinal\WebCompiler.vshost.exe" />
+    <Content Include="NFinal\WebCompiler.vshost.exe.config" />
+    <Content Include="NFinal\WebCompiler.vshost.exe.manifest" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App\Common\Pay\" />
+    <Folder Include="App\Common\User\" />
+    <Folder Include="App\Content\images\" />
+    <Folder Include="App\Content\kindeditor\attached\" />
+    <Folder Include="bin\" />
+    <Folder Include="NFinal\Common\Payment\Caifutong\" />
+    <Folder Include="NFinal\Compile\AutoComplete\" />
+    <Folder Include="NFinal\Content\images\" />
+    <Folder Include="NFinal\Content\kindeditor\attached\" />
+    <Folder Include="NFinal\Resource\syntaxhighlighter\compass\" />
+    <Folder Include="NFinal\Resource\syntaxhighlighter\scripts\" />
+    <Folder Include="NFinal\Resource\syntaxhighlighter\src\" />
+    <Folder Include="NFinal\Resource\syntaxhighlighter\styles\" />
+    <Folder Include="NFinal\Resource\syntaxhighlighter\tests\brushes\" />
+    <Folder Include="NFinal\Resource\syntaxhighlighter\tests\cases\" />
+    <Folder Include="NFinal\Resource\syntaxhighlighter\tests\js\" />
+    <Folder Include="NFinal\SqlTemplate\oracle2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App\Content\css\frame.css" />
+    <Content Include="App\Content\js\jquery-1.11.2.min.js" />
+    <Content Include="App\Content\kindeditor\asp.net\README.txt" />
+    <Content Include="App\Content\kindeditor\examples\auto-height.html" />
+    <Content Include="App\Content\kindeditor\examples\colorpicker.html" />
+    <Content Include="App\Content\kindeditor\examples\custom-plugin.html" />
+    <Content Include="App\Content\kindeditor\examples\custom-theme.html" />
+    <Content Include="App\Content\kindeditor\examples\default.html" />
+    <Content Include="App\Content\kindeditor\examples\dialog.html" />
+    <Content Include="App\Content\kindeditor\examples\dynamic-load.html" />
+    <Content Include="App\Content\kindeditor\examples\file-dialog.html" />
+    <Content Include="App\Content\kindeditor\examples\file-manager.html" />
+    <Content Include="App\Content\kindeditor\examples\filter-mode.html" />
+    <Content Include="App\Content\kindeditor\examples\image-dialog.html" />
+    <Content Include="App\Content\kindeditor\examples\index.css" />
+    <Content Include="App\Content\kindeditor\examples\index.html" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui.html" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\jquery-ui-1.9.2.custom.css" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\css\smoothness\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\js\jquery-ui-1.9.2.custom.js" />
+    <Content Include="App\Content\kindeditor\examples\jquery-ui\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="App\Content\kindeditor\examples\jquery.html" />
+    <Content Include="App\Content\kindeditor\examples\jquery.js" />
+    <Content Include="App\Content\kindeditor\examples\multi-image-dialog.html" />
+    <Content Include="App\Content\kindeditor\examples\multi-language.html" />
+    <Content Include="App\Content\kindeditor\examples\newline.html" />
+    <Content Include="App\Content\kindeditor\examples\node.html" />
+    <Content Include="App\Content\kindeditor\examples\paste-type.html" />
+    <Content Include="App\Content\kindeditor\examples\qqstyle.html" />
+    <Content Include="App\Content\kindeditor\examples\readonly.html" />
+    <Content Include="App\Content\kindeditor\examples\simple.html" />
+    <Content Include="App\Content\kindeditor\examples\uploadbutton.html" />
+    <Content Include="App\Content\kindeditor\examples\url-type.html" />
+    <Content Include="App\Content\kindeditor\examples\word-count.html" />
+    <Content Include="App\Content\kindeditor\kindeditor-all-min.js" />
+    <Content Include="App\Content\kindeditor\kindeditor-all.js" />
+    <Content Include="App\Content\kindeditor\kindeditor-min.js" />
+    <Content Include="App\Content\kindeditor\kindeditor.js" />
+    <Content Include="App\Content\kindeditor\lang\ar.js" />
+    <Content Include="App\Content\kindeditor\lang\en.js" />
+    <Content Include="App\Content\kindeditor\lang\ko.js" />
+    <Content Include="App\Content\kindeditor\lang\zh_CN.js" />
+    <Content Include="App\Content\kindeditor\lang\zh_TW.js" />
+    <Content Include="App\Content\kindeditor\license.txt" />
+    <Content Include="App\Content\kindeditor\plugins\anchor\anchor.js" />
+    <Content Include="App\Content\kindeditor\plugins\autoheight\autoheight.js" />
+    <Content Include="App\Content\kindeditor\plugins\baidumap\baidumap.js" />
+    <Content Include="App\Content\kindeditor\plugins\baidumap\index.html" />
+    <Content Include="App\Content\kindeditor\plugins\baidumap\map.html" />
+    <Content Include="App\Content\kindeditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="App\Content\kindeditor\plugins\code\code.js" />
+    <Content Include="App\Content\kindeditor\plugins\code\prettify.css" />
+    <Content Include="App\Content\kindeditor\plugins\code\prettify.js" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\emoticons.js" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\0.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\1.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\10.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\100.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\101.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\102.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\103.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\104.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\105.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\106.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\107.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\108.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\109.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\11.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\110.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\111.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\112.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\113.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\114.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\115.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\116.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\117.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\118.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\119.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\12.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\120.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\121.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\122.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\123.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\124.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\125.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\126.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\127.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\128.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\129.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\13.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\130.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\131.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\132.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\133.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\134.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\14.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\15.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\16.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\17.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\18.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\19.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\2.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\20.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\21.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\22.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\23.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\24.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\25.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\26.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\27.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\28.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\29.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\3.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\30.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\31.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\32.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\33.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\34.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\35.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\36.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\37.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\38.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\39.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\4.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\40.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\41.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\42.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\43.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\44.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\45.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\46.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\47.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\48.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\49.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\5.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\50.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\51.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\52.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\53.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\54.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\55.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\56.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\57.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\58.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\59.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\6.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\60.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\61.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\62.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\63.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\64.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\65.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\66.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\67.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\68.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\69.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\7.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\70.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\71.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\72.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\73.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\74.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\75.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\76.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\77.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\78.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\79.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\8.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\80.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\81.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\82.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\83.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\84.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\85.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\86.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\87.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\88.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\89.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\9.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\90.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\91.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\92.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\93.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\94.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\95.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\96.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\97.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\98.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\99.gif" />
+    <Content Include="App\Content\kindeditor\plugins\emoticons\images\static.gif" />
+    <Content Include="App\Content\kindeditor\plugins\filemanager\filemanager.js" />
+    <Content Include="App\Content\kindeditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="App\Content\kindeditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="App\Content\kindeditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="App\Content\kindeditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="App\Content\kindeditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="App\Content\kindeditor\plugins\flash\flash.js" />
+    <Content Include="App\Content\kindeditor\plugins\image\image.js" />
+    <Content Include="App\Content\kindeditor\plugins\image\images\align_left.gif" />
+    <Content Include="App\Content\kindeditor\plugins\image\images\align_right.gif" />
+    <Content Include="App\Content\kindeditor\plugins\image\images\align_top.gif" />
+    <Content Include="App\Content\kindeditor\plugins\image\images\refresh.png" />
+    <Content Include="App\Content\kindeditor\plugins\insertfile\insertfile.js" />
+    <Content Include="App\Content\kindeditor\plugins\lineheight\lineheight.js" />
+    <Content Include="App\Content\kindeditor\plugins\link\link.js" />
+    <Content Include="App\Content\kindeditor\plugins\map\map.html" />
+    <Content Include="App\Content\kindeditor\plugins\map\map.js" />
+    <Content Include="App\Content\kindeditor\plugins\media\media.js" />
+    <Content Include="App\Content\kindeditor\plugins\multiimage\images\image.png" />
+    <Content Include="App\Content\kindeditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="App\Content\kindeditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="App\Content\kindeditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="App\Content\kindeditor\plugins\multiimage\multiimage.js" />
+    <Content Include="App\Content\kindeditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="App\Content\kindeditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="App\Content\kindeditor\plugins\preview\preview.js" />
+    <Content Include="App\Content\kindeditor\plugins\quickformat\quickformat.js" />
+    <Content Include="App\Content\kindeditor\plugins\table\table.js" />
+    <Content Include="App\Content\kindeditor\plugins\template\html\1.html" />
+    <Content Include="App\Content\kindeditor\plugins\template\html\2.html" />
+    <Content Include="App\Content\kindeditor\plugins\template\html\3.html" />
+    <Content Include="App\Content\kindeditor\plugins\template\template.js" />
+    <Content Include="App\Content\kindeditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="App\Content\kindeditor\themes\common\anchor.gif" />
+    <Content Include="App\Content\kindeditor\themes\common\blank.gif" />
+    <Content Include="App\Content\kindeditor\themes\common\flash.gif" />
+    <Content Include="App\Content\kindeditor\themes\common\loading.gif" />
+    <Content Include="App\Content\kindeditor\themes\common\media.gif" />
+    <Content Include="App\Content\kindeditor\themes\common\rm.gif" />
+    <Content Include="App\Content\kindeditor\themes\default\background.png" />
+    <Content Include="App\Content\kindeditor\themes\default\default.css" />
+    <Content Include="App\Content\kindeditor\themes\default\default.png" />
+    <Content Include="App\Content\kindeditor\themes\qq\editor.gif" />
+    <Content Include="App\Content\kindeditor\themes\qq\qq.css" />
+    <Content Include="App\Content\kindeditor\themes\simple\simple.css" />
+    <Content Include="App\Views\Default\Common\Public\Error.aspx" />
+    <Content Include="App\Views\Default\Common\Public\Success.aspx" />
+    <Content Include="App\Views\Default\IndexController\Index.aspx" />
+    <Content Include="App\WebCompiler.aspx" />
+    <Content Include="App\Web\Default\Common\Public\Error.html" />
+    <Content Include="App\Web\Default\Common\Public\Success.html" />
+    <Content Include="App\Web\Default\IndexController\Index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NFinal\Doc\CodeCreateFlow.sequencediagram.layout" />
+    <EmbeddedResource Include="NFinal\Doc\ExecuteFlow.sequencediagram.layout" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12813</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12799/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
